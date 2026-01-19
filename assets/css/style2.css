@@ -1,0 +1,155 @@
+/* =========================
+   KPI CHEF – AMÉLIORÉ
+========================= */
+
+.kpi-card {
+    position: relative;
+    background: white;
+    border-radius: 18px;
+    padding: 26px;
+    height: 200px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    overflow: hidden;
+}
+
+.kpi-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* Contenu */
+.kpi-content {
+    position: relative;
+    z-index: 2;
+}
+
+.kpi-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.kpi-label {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-top: 6px;
+}
+
+/* Icône background */
+.kpi-bg-icon {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 6.5rem;
+    opacity: 0.08;
+}
+
+/* =========================
+   COULEURS KPI
+========================= */
+
+.kpi-blue {
+    color: #0d3b66;
+}
+.kpi-blue::before {
+    background: linear-gradient(90deg, #0d3b66, #1d6fa5);
+}
+
+.kpi-orange {
+    color: #ef6c00;
+}
+.kpi-orange::before {
+    background: linear-gradient(90deg, #ef6c00, #ff9800);
+}
+
+.kpi-red {
+    color: #c62828;
+}
+.kpi-red::before {
+    background: linear-gradient(90deg, #c62828, #e53935);
+}
+
+.kpi-green {
+    color: #2e7d32;
+}
+.kpi-green::before {
+    background: linear-gradient(90deg, #2e7d32, #43a047);
+}
+
+/* Bande supérieure */
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+}
+
+.classement-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.classement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rank-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #28a745, #007bff);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dossier-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.dossier-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #007bff;
+    text-align: center;
+    margin: 4rem 0 2.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #28a745, #007bff);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+@media (max-width: 992px) {
+    .kpi-card {
+        height: 180px;
+    }
+    .kpi-number {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,202 @@
+/* =========================
+   FONT GLOBAL
+========================= */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-page {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #28a745 0%, #007bff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Spotlight */
+#spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0.15) 30%,
+        transparent 60%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* Login card */
+.login-card {
+    max-width: 440px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 2;
+    animation: fadeInUp 0.9s ease-out;
+}
+
+.login-header {
+    background: linear-gradient(to right, #28a745, #007bff);
+    padding: 50px 40px;
+    text-align: center;
+    color: white;
+}
+
+.login-header img {
+    width: 130px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.login-body {
+    padding: 50px 40px;
+}
+
+.btn-login {
+    background: linear-gradient(to right, #28a745, #007bff);
+    border: none;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 50px;
+    transition: all 0.35s ease;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(40, 167, 69, 0.4);
+}
+
+.form-control {
+    border-radius: 50px;
+    padding: 14px 24px;
+    border: 1px solid #ced4da;
+    transition: all 0.25s ease;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.2);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+========================= */
+.with-sidebar {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding-left: 280px;
+}
+
+.main-content {
+    padding: 32px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #dee2e6;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Sidebar links */
+.sidebar-link {
+    color: #212529;
+    transition: all 0.25s ease;
+    border-left: 4px solid transparent;
+}
+
+/* Hover */
+.sidebar-link:hover {
+    background-color: rgba(40, 167, 69, 0.08);
+    color: #28a745 !important;
+}
+
+/* Active link */
+.sidebar-link.active {
+    background: linear-gradient(135deg, #28a745, #007bff);
+    color: #ffffff !important;
+    border-left-color: #28a745;
+    box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+/* Active icon */
+.sidebar-link.active i {
+    color: #ffffff !important;
+    transform: scale(1.1);
+}
+
+/* Icons general */
+.sidebar-link i {
+    color: #6c757d;
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   SIDEBAR USER (BOTTOM)
+========================= */
+.sidebar .bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.sidebar .btn-outline-danger {
+    border: none;
+}
+
+.sidebar .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+html, body {
+    overflow-x: hidden;
+}
+
+/* Action cards (dashboard agent) */
+.action-card {
+    transition: all 0.25s ease;
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon box inside action cards */
+.icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
